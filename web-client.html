@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammugi MUD Client</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #output {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 15px;
+            height: 400px;
+            overflow-y: scroll;
+            white-space: pre-wrap;
+            margin-bottom: 10px;
+        }
+        #input {
+            width: 100%;
+            background-color: #222;
+            color: #00ff00;
+            border: 1px solid #333;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .status {
+            margin-bottom: 10px;
+            color: #ffff00;
+        }
+        button {
+            background-color: #333;
+            color: #00ff00;
+            border: 1px solid #555;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Sammugi MUD</h1>
+        <div class="status" id="status">연결 중...</div>
+        <button onclick="connect()">연결</button>
+        <button onclick="disconnect()">연결 끊기</button>
+        
+        <div id="output"></div>
+        <input type="text" id="input" placeholder="명령어를 입력하세요..." autocomplete="off">
+    </div>
+
+    <script>
+        let socket = null;
+        const output = document.getElementById('output');
+        const input = document.getElementById('input');
+        const status = document.getElementById('status');
+
+        function connect() {
+            try {
+                socket = new WebSocket('ws://localhost:4000');
+                
+                socket.onopen = function(event) {
+                    status.textContent = '✅ 연결됨';
+                    addToOutput('=== Sammugi MUD에 연결되었습니다 ===\n');
+                };
+
+                socket.onmessage = function(event) {
+                    addToOutput(event.data);
+                };
+
+                socket.onclose = function(event) {
+                    status.textContent = '❌ 연결 끊김';
+                    addToOutput('\n=== 연결이 끊어졌습니다 ===\n');
+                };
+
+                socket.onerror = function(error) {
+                    status.textContent = '❌ 오류 발생';
+                    addToOutput('\n=== 연결 오류: ' + error + ' ===\n');
+                };
+            } catch (e) {
+                status.textContent = '❌ 연결 실패';
+                addToOutput('\n=== 연결 실패: ' + e.message + ' ===\n');
+            }
+        }
+
+        function disconnect() {
+            if (socket) {
+                socket.close();
+                socket = null;
+            }
+        }
+
+        function addToOutput(text) {
+            output.textContent += text;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function sendCommand(command) {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(command + '\n');
+                addToOutput('> ' + command + '\n');
+            } else {
+                addToOutput('=== 연결되지 않음 ===\n');
+            }
+        }
+
+        // Enter 키로 명령어 전송
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const command = input.value.trim();
+                if (command) {
+                    sendCommand(command);
+                    input.value = '';
+                }
+            }
+        });
+
+        // 페이지 로드 시 자동 연결
+        window.addEventListener('load', function() {
+            setTimeout(connect, 1000);
+        });
+    </script>
+</body>
+</html> 

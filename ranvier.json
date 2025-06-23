@@ -5,7 +5,8 @@
     "bundle-example-classes",
     "bundle-example-commands",
     "bundle-example-lib",
-    "telnet-networking"
+    "telnet-networking",
+    "websocket-networking"
   ],
   "dataSources": {
     "YamlArea": {

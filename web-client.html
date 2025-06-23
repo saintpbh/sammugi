@@ -70,7 +70,7 @@
 
         function connect() {
             try {
-                socket = new WebSocket('ws://localhost:4000');
+                socket = new WebSocket('ws://localhost:4001');
                 
                 socket.onopen = function(event) {
                     status.textContent = '✅ 연결됨';

@@ -1,0 +1,218 @@
+# 소패성(小沛城) - 유비의 거점
+- id: castle_main_hall
+  title: "소패성 대전"
+  description: |
+    웅장한 소패성의 대전입니다. 높은 기둥들과 붉은 기둥이 위엄을 자아내며, 
+    정면에는 유현덕의 자리가 마련되어 있습니다. 좌우로는 문관과 무관들이 
+    서 있고, 큰 지도가 벽에 걸려있어 현재 세력 현황을 한눈에 볼 수 있습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/courtyard"
+      direction: south
+      description: "남쪽으로 안뜰이 보입니다"
+    - roomId: "sangokushi-main:xiaopei/strategy_room"  
+      direction: east
+      description: "동쪽으로 작전실이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/private_chamber"
+      direction: west  
+      description: "서쪽으로 유비의 사실이 있습니다"
+
+- id: courtyard
+  title: "소패성 안뜰"
+  description: |
+    소패성의 넓은 안뜰입니다. 훈련하는 병사들의 함성이 들리고, 
+    말들이 뛰어다니는 소리가 들립니다. 중앙에는 큰 우물이 있고, 
+    사방으로 통하는 길이 뻗어있습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/castle_main_hall"
+      direction: north
+      description: "북쪽으로 대전이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/barracks"
+      direction: east
+      description: "동쪽으로 병영이 있습니다" 
+    - roomId: "sangokushi-main:xiaopei/stables"
+      direction: west
+      description: "서쪽으로 마구간이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/south_gate"
+      direction: south
+      description: "남쪽으로 성문이 보입니다"
+
+- id: strategy_room
+  title: "작전실"
+  description: |
+    여러 지도와 서책들로 가득한 작전실입니다. 큰 탁자 위에는 
+    천하 지도가 펼쳐져 있고, 각 지역의 세력이 색깔로 표시되어 있습니다. 
+    벽에는 각종 전술서와 병법서가 빼곡히 꽂혀있습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/castle_main_hall"
+      direction: west
+      description: "서쪽으로 대전이 있습니다"
+
+- id: private_chamber  
+  title: "유비의 사실"
+  description: |
+    소박하지만 정갈한 유비의 개인 방입니다. 서안에는 붓과 벼루가 놓여있고, 
+    한쪽 벽에는 삼형제의 의리를 담은 그림이 걸려있습니다. 
+    창밖으로는 소패성의 전경이 한눈에 들어옵니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/castle_main_hall"
+      direction: east  
+      description: "동쪽으로 대전이 있습니다"
+
+- id: barracks
+  title: "병영"
+  description: |
+    병사들이 머무는 병영입니다. 무기가 정돈되어 있고, 
+    갑옷들이 줄지어 걸려있습니다. 병사들이 훈련하거나 
+    무기를 손질하는 모습을 볼 수 있습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/courtyard"
+      direction: west
+      description: "서쪽으로 안뜰이 있습니다"
+
+- id: stables
+  title: "마구간" 
+  description: |
+    말들이 머무는 마구간입니다. 준마들이 사료를 먹고 있고, 
+    마부들이 말을 돌보고 있습니다. 말 울음소리와 
+    짚의 냄새가 진동합니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/courtyard"
+      direction: east
+      description: "동쪽으로 안뜰이 있습니다"
+
+- id: south_gate
+  title: "소패성 남문"
+  description: |
+    소패성의 남쪽 출입구입니다. 위병들이 경계를 서고 있고, 
+    성 밖으로 뻗어나가는 길이 보입니다. 멀리 마을들의 연기가 
+    하늘로 올라가는 모습이 보입니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/courtyard"
+      direction: north
+      description: "북쪽으로 안뜰이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/main_road"
+      direction: south
+      description: "남쪽으로 대로가 뻗어있습니다"
+
+# 주변 지역들
+- id: main_road
+  title: "소패성 대로"
+  description: |
+    소패성에서 뻗어나가는 주요 대로입니다. 상인들과 여행자들이 
+    오가며, 사방으로 마을들로 향하는 길이 갈라집니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/south_gate"
+      direction: north
+      description: "북쪽으로 소패성이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/east_village_road"
+      direction: east
+      description: "동쪽으로 동촌 가는 길이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/west_village_road"  
+      direction: west
+      description: "서쪽으로 서촌 가는 길이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/south_village_road"
+      direction: south 
+      description: "남쪽으로 남촌 가는 길이 있습니다"
+    - roomId: "sangokushi-main:xiaopei/north_village_road"
+      direction: northeast
+      description: "북동쪽으로 북촌 가는 길이 있습니다"
+
+# 동촌 (농업 마을)
+- id: east_village_road
+  title: "동촌 가는 길"
+  description: |
+    동촌으로 향하는 흙길입니다. 양쪽으로 논밭이 펼쳐져 있고, 
+    농부들이 일하는 모습이 보입니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/main_road"
+      direction: west
+      description: "서쪽으로 대로가 있습니다"
+    - roomId: "sangokushi-main:xiaopei/east_village"
+      direction: east
+      description: "동쪽으로 동촌이 있습니다"
+
+- id: east_village
+  title: "동촌 (東村)"
+  description: |
+    소패성 동쪽의 농업 마을입니다. 논밭이 잘 정리되어 있고, 
+    곡식 창고들이 줄지어 있습니다. 마을 사람들이 농사일에 
+    바쁜 모습을 보이고 있습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/east_village_road"
+      direction: west
+      description: "서쪽으로 대로 가는 길이 있습니다"
+
+# 서촌 (상업 마을)  
+- id: west_village_road
+  title: "서촌 가는 길"
+  description: |
+    서촌으로 향하는 길입니다. 상인들의 수레가 오가며, 
+    상품을 실은 짐꾼들이 분주히 움직입니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/main_road"
+      direction: east
+      description: "동쪽으로 대로가 있습니다"
+    - roomId: "sangokushi-main:xiaopei/west_village"
+      direction: west  
+      description: "서쪽으로 서촌이 있습니다"
+
+- id: west_village
+  title: "서촌 (西村)"
+  description: |
+    소패성 서쪽의 상업 마을입니다. 여러 상점들이 늘어서 있고, 
+    시장에서는 각지의 물건들을 사고팔고 있습니다. 
+    활기찬 거래의 소리가 끊이지 않습니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/west_village_road"
+      direction: east
+      description: "동쪽으로 대로 가는 길이 있습니다"
+
+# 남촌 (어업 마을)
+- id: south_village_road
+  title: "남촌 가는 길"
+  description: |
+    남촌으로 향하는 길입니다. 강물 냄새가 나고, 
+    고기를 실은 수레들이 지나갑니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/main_road"
+      direction: north
+      description: "북쪽으로 대로가 있습니다"  
+    - roomId: "sangokushi-main:xiaopei/south_village"
+      direction: south
+      description: "남쪽으로 남촌이 있습니다"
+
+- id: south_village  
+  title: "남촌 (南村)"
+  description: |
+    소패성 남쪽 강가의 어업 마을입니다. 배들이 강에 떠 있고, 
+    어부들이 그물을 손질하고 있습니다. 
+    생선 말리는 냄새와 강바람이 느껴집니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/south_village_road"
+      direction: north
+      description: "북쪽으로 대로 가는 길이 있습니다"
+
+# 북촌 (광산 마을)
+- id: north_village_road
+  title: "북촌 가는 길"  
+  description: |
+    북촌으로 향하는 산길입니다. 돌이 많고 험준하며, 
+    광산에서 나오는 수레들이 지나갑니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/main_road"
+      direction: southwest
+      description: "남서쪽으로 대로가 있습니다"
+    - roomId: "sangokushi-main:xiaopei/north_village"
+      direction: northeast
+      description: "북동쪽으로 북촌이 있습니다"
+
+- id: north_village
+  title: "북촌 (北村)"
+  description: |
+    소패성 북쪽 산기슭의 광산 마을입니다. 철광석을 캐는 
+    광부들이 일하고 있고, 대장간에서는 무기와 농기구를 
+    만드는 망치 소리가 울려퍼집니다.
+  exits:
+    - roomId: "sangokushi-main:xiaopei/north_village_road"
+      direction: southwest
+      description: "남서쪽으로 대로 가는 길이 있습니다" 

@@ -1,0 +1,7 @@
+name: "소패성 (小沛城)"
+respawn: 60
+metadata:
+  title: "유비의 근거지"
+  description: "유현덕이 다스리는 소패성과 그 주변 마을들"
+  era: "후한말"
+  region: "서주" 

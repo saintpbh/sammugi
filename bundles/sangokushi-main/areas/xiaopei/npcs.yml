@@ -1,0 +1,302 @@
+# 유비 (劉備) - 성주
+- id: liubei
+  name: "유현덕"
+  description: "소패성의 성주인 유현덕입니다. 인자한 미소를 띄고 있으며, 백성을 사랑하는 마음이 눈에서 드러납니다."
+  room: "sangokushi-main:xiaopei/castle_main_hall"
+  level: 50
+  class: "ruler"
+  stats:
+    intellect: 75
+    force: 65
+    charm: 95
+    politics: 80
+  attributes:
+    health: 1000
+    energy: 800
+  metadata:
+    mbti: "ENFJ"  # 선천적인 지도자, 사람을 중시하는 타입
+    birthplace: "탁군"
+    family: "한 황실 후예"
+    specialty: "인덕정치"
+    personality: "인자하고 의리를 중시하며, 백성을 사랑한다"
+    relationships:
+      - "관우: 의형제"
+      - "장비: 의형제"
+      - "제갈량: 군사"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "liubei"
+
+# 관우 (關羽) - 무장
+- id: guanyu  
+  name: "관운장"
+  description: "붉은 얼굴에 긴 수염을 기른 위풍당당한 무장입니다. 청룡언월도를 든 모습이 매우 용맹스럽습니다."
+  room: "sangokushi-main:xiaopei/castle_main_hall"
+  level: 45
+  class: "warrior"
+  stats:
+    intellect: 70
+    force: 95
+    charm: 85
+    politics: 60
+  attributes:
+    health: 1200
+    energy: 900
+  metadata:
+    mbti: "ISTJ"  # 충성심이 강하고 원칙을 중시하는 타입
+    birthplace: "하동 해량"
+    family: "관씨 일족"
+    specialty: "무예"
+    personality: "충직하고 의리를 중시하며, 자존심이 강하다"
+    relationships:
+      - "유비: 의형제"
+      - "장비: 의형제"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "guanyu"
+
+# 장비 (張飛) - 무장  
+- id: zhangfei
+  name: "장익덕"
+  description: "우람한 체격에 험상궂은 얼굴을 한 용맹한 무장입니다. 장팔뱀창을 휘두르는 모습이 무섭습니다."
+  room: "sangokushi-main:xiaopei/castle_main_hall"
+  level: 45
+  class: "warrior"
+  stats:
+    intellect: 55
+    force: 98
+    charm: 70
+    politics: 45
+  attributes:
+    health: 1300
+    energy: 950
+  metadata:
+    mbti: "ESTP"  # 즉흥적이고 행동력이 강한 타입
+    birthplace: "탁군"
+    family: "장씨 일족"
+    specialty: "격투"
+    personality: "호탕하고 직선적이며, 성격이 급하다"
+    relationships:
+      - "유비: 의형제"
+      - "관우: 의형제"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "zhangfei"
+
+# 제갈량 (諸葛亮) - 군사
+- id: zhugeliang
+  name: "제갈공명"
+  description: "깃털 부채를 든 젊은 군사입니다. 총명한 눈빛과 차분한 모습에서 지혜가 느껴집니다."
+  room: "sangokushi-main:xiaopei/strategy_room"
+  level: 40
+  class: "strategist"
+  stats:
+    intellect: 100
+    force: 35
+    charm: 90
+    politics: 95
+  attributes:
+    health: 600
+    energy: 1200
+  metadata:
+    mbti: "INTJ"  # 전략적 사고와 장기적 비전을 가진 타입
+    birthplace: "랑야 양도"
+    family: "제갈씨 일족"
+    specialty: "전략"
+    personality: "침착하고 지혜로우며, 완벽주의 성향이 있다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "zhugeliang"
+
+# 조운 (趙雲) - 무장
+- id: zhaoyun
+  name: "조자룡"
+  description: "준수한 외모의 젊은 무장입니다. 은빛 갑옷을 입고 창을 든 모습이 기품있습니다."
+  room: "sangokushi-main:xiaopei/barracks"
+  level: 42
+  class: "warrior"
+  stats:
+    intellect: 75
+    force: 90
+    charm: 85
+    politics: 70
+  attributes:
+    health: 1100
+    energy: 850
+  metadata:
+    mbti: "ISFJ"  # 충성스럽고 보호본능이 강한 타입
+    birthplace: "상산 진정"
+    family: "조씨 일족"
+    specialty: "창술"
+    personality: "침착하고 충성스러우며, 완벽한 기사도 정신을 가지고 있다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "zhaoyun"
+
+# 마초 (馬超) - 무장
+- id: machao
+  name: "마맹기"
+  description: "서역의 피가 섞인 듯한 이국적인 외모의 기마무장입니다. 말 위에서의 전투에 능숙합니다."
+  room: "sangokushi-main:xiaopei/stables"
+  level: 44
+  class: "cavalry"
+  stats:
+    intellect: 65
+    force: 92
+    charm: 80
+    politics: 55
+  attributes:
+    health: 1050
+    energy: 900
+  metadata:
+    mbti: "ESFP"  # 자유롭고 모험을 좋아하는 타입
+    birthplace: "부풍"
+    family: "마씨 일족"
+    specialty: "기마술"
+    personality: "자유분방하고 정의감이 강하며, 복수심이 강하다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "machao"
+
+# 황충 (黃忠) - 무장
+- id: huangzhong
+  name: "황한승"
+  description: "머리가 희끗한 노장이지만 정정한 모습의 무장입니다. 활을 든 모습이 매우 당당합니다."
+  room: "sangokushi-main:xiaopei/barracks"
+  level: 48
+  class: "archer"
+  stats:
+    intellect: 70
+    force: 85
+    charm: 75
+    politics: 65
+  attributes:
+    health: 950
+    energy: 800
+  metadata:
+    mbti: "ISTP"  # 실용적이고 기술에 능숙한 타입
+    birthplace: "남양"
+    family: "황씨 일족"
+    specialty: "궁술"
+    personality: "과묵하고 성실하며, 나이에 비해 투지가 강하다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "huangzhong"
+
+# 위연 (魏延) - 무장
+- id: weiyan
+  name: "위문장"
+  description: "험상궂은 얼굴에 반항적인 기운이 느껴지는 무장입니다. 강한 야심이 눈에서 번뜩입니다."
+  room: "sangokushi-main:xiaopei/barracks"
+  level: 38
+  class: "warrior"
+  stats:
+    intellect: 65
+    force: 88
+    charm: 60
+    politics: 50
+  attributes:
+    health: 1000
+    energy: 850
+  metadata:
+    mbti: "ENTJ"  # 야심적이고 지배욕이 강한 타입
+    birthplace: "의양"
+    family: "위씨 일족"
+    specialty: "공성전"
+    personality: "야심적이고 반골 기질이 있으며, 인정받기를 원한다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "weiyan"
+
+# 간옹 (簡雍) - 문관
+- id: jianyong
+  name: "간헌화"
+  description: "온화한 미소를 띤 문관입니다. 담소를 나누는 모습이 자연스럽고 친근합니다."
+  room: "sangokushi-main:xiaopei/castle_main_hall"
+  level: 35
+  class: "diplomat"
+  stats:
+    intellect: 80
+    force: 25
+    charm: 90
+    politics: 85
+  attributes:
+    health: 500
+    energy: 900
+  metadata:
+    mbti: "ESFJ"  # 사교적이고 조화를 중시하는 타입
+    birthplace: "탁군"
+    family: "간씨 일족"
+    specialty: "외교"
+    personality: "유머러스하고 사교적이며, 분위기를 부드럽게 만든다"
+    relationships:
+      - "유비: 주군"
+      - "유비: 동향 출신"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "jianyong"
+
+# 미축 (糜竺) - 문관
+- id: mizhu
+  name: "미자중"
+  description: "단정한 옷차림의 부유한 상인 출신 문관입니다. 차분하고 신중한 모습입니다."
+  room: "sangokushi-main:xiaopei/castle_main_hall"
+  level: 32
+  class: "administrator"
+  stats:
+    intellect: 75
+    force: 20
+    charm: 80
+    politics: 90
+  attributes:
+    health: 450
+    energy: 850
+  metadata:
+    mbti: "ISFP"  # 겸손하고 성실한 타입
+    birthplace: "동해 주 상"
+    family: "미씨 상가"
+    specialty: "재정관리"
+    personality: "성실하고 겸손하며, 재물 관리에 능하다"
+    relationships:
+      - "유비: 주군"
+      - "미방: 동생"
+  behaviors:
+    - "sangokushi-dialogue"
+  script: "mizhu"
+
+# 손건 (孫乾) - 문관  
+- id: sunqian
+  name: "손공우"
+  description: "성실한 표정의 중년 문관입니다. 서류를 정리하는 모습이 매우 꼼꼼합니다."
+  room: "sangokushi-main:xiaopei/strategy_room"
+  level: 30
+  class: "administrator"
+  stats:
+    intellect: 78
+    force: 22
+    charm: 70
+    politics: 88
+  attributes:
+    health: 420
+    energy: 800
+  metadata:
+    mbti: "ISTJ"  # 성실하고 규칙을 중시하는 타입
+    birthplace: "북해"
+    family: "손씨 일족"
+    specialty: "행정"
+    personality: "성실하고 꼼꼼하며, 원칙을 중시한다"
+    relationships:
+      - "유비: 주군"
+  behaviors:
+    - "sangokushi-dialogue"  
+  script: "sunqian" 

@@ -1,0 +1,9 @@
+{
+  "name": "sangokushi-main",
+  "version": "1.0.0",
+  "description": "삼국지 MUD 메인 번들 - 성과 장수 관리",
+  "main": "index.js",
+  "keywords": ["sangokushi", "three-kingdoms", "mud", "rpg"],
+  "author": "Sammugi",
+  "license": "MIT"
+} 

@@ -6,7 +6,8 @@
     "bundle-example-commands",
     "bundle-example-lib",
     "telnet-networking",
-    "websocket-networking"
+    "websocket-networking",
+    "sangokushi-main"
   ],
   "dataSources": {
     "YamlArea": {
@@ -78,7 +79,7 @@
   "minPlayerNameLength": 3,
   "maxCharacters": 3,
   "reportToAdmins": false,
-  "startingRoom": null,
+  "startingRoom": "sangokushi-main:xiaopei/castle_main_hall",
   "moveCommand": "move",
   "skillLag": 2000,
   "defaultMaxPlayerInventory": 16,
